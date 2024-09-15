@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Image Manipulation Scripts
 
 This folder contains various scripts for working with images and Photoshop automation.
@@ -26,3 +27,6 @@ This folder contains various scripts for working with images and Photoshop autom
 
 - macOS/Linux system with bash installed (or Git Bash on Windows).
 # covor
+=======
+# covor
+>>>>>>> 3b7e5cb (initial commit)
