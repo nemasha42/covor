@@ -2,7 +2,7 @@
 const map = L.map('carpetMap', {
     crs: L.CRS.Simple,    // Use a simple coordinate reference system
     minZoom: -2,          // Allow zooming out further to see the full image
-    maxZoom: 2,           // Define how far users can zoom in
+    maxZoom: 4,           // Define how far users can zoom in
     zoomControl: true     // Enable zoom controls
   });
   
@@ -33,7 +33,7 @@ const map = L.map('carpetMap', {
   // Function to update the opacity of the original image based on zoom level
   function updateImageOpacity(zoomLevel) {
     // Calculate the opacity based on zoom, assuming max zoom of 4 and min of -2
-    let opacityLevel = (zoomLevel + 2) / 4;  // Adjust this range to fit your zoom
+    let opacityLevel = (zoomLevel + 2) / 6;  // Adjust this range to fit your zoom
   
     // Apply the opacity level dynamically
     originalLayer.setOpacity(opacityLevel);
