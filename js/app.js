@@ -48,9 +48,9 @@ function updateImageOpacity(zoomLevel) {
 
 // Function to load high-resolution images when zooming in
 function loadHighResImages() {
-  // Swap to high-resolution mosaic image
-  mosaicLayer.setUrl('images/mosaic.png');
+  // Swap to high-resolution mosaic image from Dropbox
+  mosaicLayer.setUrl('https://www.dropbox.com/scl/fi/shzc6hl9qi76nvgcr58ei/mosaic.png?rlkey=93jxa5x2tj1g0xkfrx3q9kpbv&st=sl0epiif&raw=1');
 
-  // Swap to high-resolution original image
-  originalLayer.setUrl('images/original.png');
+  // Swap to high-resolution original image from Dropbox (updated link)
+  originalLayer.setUrl('https://www.dropbox.com/scl/fi/eikhd2wofowhknvq1ws7e/original.png?rlkey=9m44yltel2me8ke56l59e7mhw&st=6jhqnbk0&raw=1');
 }
