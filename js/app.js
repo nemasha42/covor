@@ -14,7 +14,7 @@ const imageHeight = 3514;  // Height of the PNG file
 const imageBounds = [[0, 0], [imageHeight, imageWidth]];
 
 // Add the low-resolution version of the mosaic image initially
-const mosaicLayer = L.imageOverlay('./images/mosaic.png', imageBounds).addTo(map);
+const mosaicLayer = L.imageOverlay('/images/mosaic.png', imageBounds).addTo(map);
 
 // Fit the image into the view by default (show the entire carpet when the page loads)
 map.fitBounds(imageBounds);
