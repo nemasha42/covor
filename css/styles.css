@@ -9,7 +9,10 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    z-index: 999;
 }
+
+
   
   body {
     background-image: url('images/mosaic.png');  /* Use the carpet image as background */
