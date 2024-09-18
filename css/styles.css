@@ -1,18 +1,15 @@
-body, html {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
+}
+
+#carpetMap {
     width: 100%;
-    overflow: hidden;  /* Prevent scrollbars */
-  }
-  
-  #carpetMap {
-    height: 100vh;  /* Full viewport height */
-    width: 100vw;   /* Full viewport width */
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
   
   body {
     background-image: url('images/mosaic.png');  /* Use the carpet image as background */
@@ -20,4 +17,6 @@ body, html {
     background-position: top left;              /* Align the first image with the left edge */
     background-size: cover;                     /* Tile the background */
   }
+
+
   
