@@ -1,32 +1,37 @@
-<<<<<<< HEAD
-# Image Manipulation Scripts
+This project involves processing 640 photos into a high-resolution contact sheet (1200 DPI) and tiling the final output for efficient use of free Cloudinary storage. Below are the steps for preparing the contact sheet, editing in Photoshop, tiling the image, and uploading to Cloudinary.
 
-This folder contains various scripts for working with images and Photoshop automation.
+## Steps:
 
-## Scripts Overview
+### 1. Copy Photos with Origin Folder Suffix (Bash Script)
 
-- **move_and_rename_photos.sh**: Moves and renames photos from multiple folders, adding the folder name as a prefix to the file.
-- **duplicate_and_rename.sh**: Duplicates photos and adds a random two-digit number at the beginning of the file name to avoid grouping similar images.
+### 2. Clone Photos with Random Prefix (Bash Script)
+Clone each photo X times and add a random 3-digit prefix, depending on how many clones are needed:
 
-## How to Use
+### 3. Steps in Photoshop
 
-1. Ensure you have `bash` installed on your system.
-2. Open a terminal and navigate to the project folder.
-3. Make the scripts executable:
-   ```bash
-   chmod +x scripts/move_and_rename_photos.sh
-   chmod +x scripts/duplicate_and_rename.sh
-   ```
-4. Run the scripts as needed:
-   ```bash
-   ./scripts/move_and_rename_photos.sh
-   ./scripts/duplicate_and_rename.sh
-   ```
+1. **Create Contact Sheet**:
+   - Go to **File > Automate > Contact Sheet II**.
+   - Set resolution to **1200 DPI**, columns to **32**, and rows to **20**.
+   
+2. **Remove White Spaces**:
+   - Use the **Magic Wand Tool** to select the white areas between the photos and delete them.
+   
+3. **Overlay Contact Sheet**:
+   - Open your covor layer, then go to **File > Place Embedded** to add the contact sheet.
+   - Set **Blending Mode** to **Soft Light** and adjust **Opacity** to **38%**.
 
-## Requirements
+### 4. Tile the Contact Sheet for Smaller File Size
+Use ImageMagick to tile the contact sheet into smaller pieces under 10MB for Cloudinary’s free tier:
+```bash
+magick original.png -crop 8x8@ +repage +adjoin original_%d.png
+```
+### 5. Upload Files to Cloudinary
+Upload the tiled contact sheet files to Cloudinary using the Cloudinary dashboard or the API.
 
-- macOS/Linux system with bash installed (or Git Bash on Windows).
-# covor
-=======
-# covor
->>>>>>> 3b7e5cb (initial commit)
+### 6. Extract Cloudinary Links
+Use the following script `extract_cloudinary_links.sh` to extract the URLs of uploaded images:
+
+### 7. Run the Project Locally (Visual Studio)
+To run the project locally:
+1. Double-click on `index.html`.
+2. Select **Open with Live Server** in Visual Studio.
